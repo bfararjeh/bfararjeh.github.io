@@ -1,0 +1,54 @@
+:root {
+  --background: #282a3a;
+  --text: #888D94;
+  --functionCol: #9cd1bb;
+  --functionName: #BAD761;
+  --parenthesis: #FF657A;
+  --attr: #eaf2f1;
+  --string: #FFD76D;
+}
+
+/* Base layout */
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: Consolas, 'Courier New', monospace;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1250px;
+}
+
+.ascii-wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.ascii-art {
+  white-space: pre;
+  font-size: 1rem;
+  color: var(--attr);
+  line-height: 1;
+}
+
+.code-block {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  display: inline-block;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.functionCol { color: var(--functionCol); }
+.functionName { color: var(--functionName); }
+.parenthesis { color: var(--parenthesis); }
+.attr { color: var(--attr); }
+.string { color: var(--string); }
