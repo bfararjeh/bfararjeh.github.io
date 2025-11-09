@@ -59,6 +59,18 @@
   --link: #F38D70;
 }
 
+.theme-terminal {
+  --background: #000000;
+  --text: #FFFFFF;
+  --numbers: #8b8b8b;
+  --functionCol: #00FFFF;
+  --functionName: #00FF00;
+  --parenthesis: #0000FF;
+  --attr: #FF0000;
+  --string: #FFFF00;
+  --link: #FF00FF;
+}
+
 .functionCol { color: var(--functionCol); }
 .functionName { color: var(--functionName); }
 .parenthesis { color: var(--parenthesis); }
