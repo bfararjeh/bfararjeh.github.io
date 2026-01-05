@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Baha Alfararjeh's personal portfolio!">
+    <title>Baha's Portfolio</title>
+    <link rel="stylesheet" href="portfolio-style.css">
+  </head>
+
+  <body>
+    <button id="themeButton" title="Switch Theme">
+      <svg id="paletteIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 324.99 324.99" xml:space="preserve">
+        <path d="M307.6,129.885c-11.453-11.447-23.783-16.778-38.805-16.778c-6.189,0-12.056,0.858-17.729,1.688
+        c-5.094,0.745-9.905,1.449-14.453,1.45c-8.27,0-14.197-2.397-19.82-8.017c-10.107-10.101-8.545-20.758-6.569-34.25
+        c2.357-16.096,5.291-36.127-15.101-56.508C183.578,5.932,167.848,0.081,148.372,0.081c-37.296,0-78.367,21.546-99.662,42.829
+        C17.398,74.205,0.1,115.758,0,159.917c-0.1,44.168,17.018,85.656,48.199,116.82c31.077,31.061,72.452,48.168,116.504,48.171
+        c0.005,0,0.007,0,0.013,0c44.315,0,86.02-17.289,117.428-48.681c17.236-17.226,32.142-44.229,38.9-70.471
+        C329.291,173.738,324.517,146.793,307.6,129.885z M77.58,223.842c-11.995,4.219-25.071-2.067-29.233-14.02
+        c-4.15-11.94,2.182-25.045,14.148-29.259c11.972-4.218,25.055,2.063,29.216,14.015C95.877,206.526,89.539,219.634,77.58,223.842z
+         M94.186,132.36c-6.774,10.743-20.952,14.011-31.66,7.3c-10.735-6.729-13.93-20.883-7.16-31.621
+        c6.774-10.744,20.951-14.012,31.66-7.299C97.749,107.456,100.943,121.611,94.186,132.36z M152.865,264.268
+        c-4.222,11.987-17.332,18.316-29.285,14.151c-11.959-4.16-18.226-17.229-14.027-29.195c4.222-11.965,17.333-18.294,29.297-14.141
+        C150.796,239.232,157.075,252.313,152.865,264.268z M144.383,95.278c-12.597,1.445-23.942-7.588-25.33-20.171
+        c-1.398-12.594,7.69-23.974,20.293-25.423c12.604-1.45,23.947,7.582,25.34,20.183C166.073,82.45,156.985,93.829,144.383,95.278z
+         M224.401,262.161c-10.737,6.759-24.897,3.562-31.632-7.141c-6.71-10.708-3.436-24.882,7.314-31.653
+        c10.733-6.777,24.907-3.574,31.616,7.134C238.43,241.231,235.162,255.4,224.401,262.161z M274.914,173.294
+        c-1.461,12.584-12.83,21.673-25.432,20.297c-12.58-1.398-21.611-12.742-20.177-25.343c1.433-12.578,12.829-21.673,25.421-20.286
+        C267.328,149.361,276.366,160.699,274.914,173.294z"/>
+      </svg>
+    </button>
+
+    <a id="homeButton" title="Home" href="/">
+      <svg id="homeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" xml:space="preserve">
+        <path d="M341.8 72.6C329.5 61.2 310.5 61.2 298.3 72.6L74.3 280.6C64.7 289.6 61.5 303.5 66.3 315.7C71.1 327.9 82.8 336 96 336L112 336L112 512C112 547.3 140.7 576 176 576L464 576C499.3 576 528 547.3 528 512L528 336L544 336C557.2 336 569 327.9 573.8 315.7C578.6 303.5 575.4 289.5 565.8 280.6L341.8 72.6zM304 384L336 384C362.5 384 384 405.5 384 432L384 528L256 528L256 432C256 405.5 277.5 384 304 384z"/></svg>
+    </a>
+
+    <div id="lineNumbers" class="line-numbers"></div>
+
+    <div id="content">
+      <pre id="codeBlock" class="code-block">
+<span>''' Welcome to my personal portfolio! This site serves as a showcase for all projects I've created as well as their relevant technologies. The appropriate links are present where relevant, and if you'd like to get in touch, you can email me at <a href="mailto:bahafararjeh@hotmail.com" class="email">bahafararjeh@hotmail.com</a>
+
+My name is Baha Alfararjeh I'm a recent graduate of the University of Portsmouth, having completed my Bachelor's in Computer Science (with Honours) and achieving a First class degree. Since graduating, I've been working on and looking to settle into a career as a software developer/engineer, and while I do so, I've been creating, developing, designing, practicing, and learning different technologies, skills, and projects.
+
+Below are my some projects I've completed, as well as skills, languages, and fields I have experience in.
+'''</span>
+
+<span class="functionCol">class</span> <span class="functionName">SF6 Fantasy League</span><span class="parenthesis">()</span>:
+    self.<span class="attr">description</span> = '<span class="string">Street Fighter 6 is a competitive eSport within the wider gaming sphere known as the Fighting Game Community (FGC). A "fantasy league" is a a competition in which participants select imaginary teams from among the players in a league and score points according to the actual performance of their players. This project is exactly that: a fantasy league wherein participants can select their dream team of five players, drawn by a roster within a group of friends, and have them score throughout the Street Fighter 6 season.
+
+The Supabase database requires TypeScript for server-side methods and plain SQL for selects, inserts, and updates. The application will be coded entirely in Python, using the Supabase library for backend services and likely Tkinter or PyQt for the frontend.
+      
+This is my largest proejct to date, and involves maintaining a database via Supabase, developing backend services to interact with the database, and designing the frontend application users will be interface the project with. </span>'
+
+    self.<span class="attr">technologies</span> = ['<span class="string">Python</span>', 
+                         '<span class="string">TypeScript</span>', 
+                         '<span class="string">SQL</span>', 
+                         '<span class="string">Database Management</span>'] 
+    self.<span class="attr">repository</span> = <a href="https://github.com/bfararjeh/sf6-fantasy-league" target="_blank" class="link">sf6_fantasy_league</a>
+    self.<span class="attr">dissertation</span> = <a href="assets/Using Machine Learning to Create a Human-Like AI Opponent to Combat Ladder Anxiety.pdf" target="_blank" class="link">research_paper</a>
+
+
+
+
+<span class="functionCol">class</span> <span class="functionName">Footsies Neural Network</span><span class="parenthesis">()</span>:
+    self.<span class="attr">description</span> = '<span class="string">Footsies is a video game developed by HiFight within the Fighting Game genre. For my dissertation project, I designed, developed, and built an AI agent using a neural network that could be fought against within the game. The project aim was to provide alternative methods of play for players suffering from "Ladder Anxiety", as existing solutions proved (according to secondary research) lacklustre. You can take a look at my research paper and the GitHub repository below. 
+      
+TensorFlow and Keras were used for the neural network, with Pandas and scikit-learn for data processing: all written in Python. Websockets were used to connect the neural network to the observation logic written in C# in Unity, running on local servers. 
+
+The project achieved a First, and is the project I am most proud of to date. Not only did I teach myself the fundamentals of machine learning and importance of data preprocessing, but I also learnt how to structure a project plan, organise deadlines, and meet specification requirements.</span>'
+
+    self.<span class="attr">technologies</span> = ['<span class="string">TensorFlow w/ Keras API</span>', 
+                         '<span class="string">Python</span>', 
+                         '<span class="string">C#</span>', 
+                         '<span class="string">Pandas</span>', 
+                         '<span class="string">scikit-learn</span>']
+    self.<span class="attr">repository</span> = <a href="https://github.com/bfararjeh/footsies_final_year_project" target="_blank" class="link">footsies_final_year_project</a>
+    self.<span class="attr">dissertation</span> = <a href="assets/Using Machine Learning to Create a Human-Like AI Opponent to Combat Ladder Anxiety.pdf" target="_blank" class="link">research_paper</a>
+
+
+
+
+<span class="functionCol">class</span> <span class="functionName">Brand Site</span><span class="parenthesis">()</span>:
+    self.<span class="attr">description</span> = '<span class="string">In my personal endeavours I am a part of the FGC: Fighting Game Community. Within this community, I compete, coach players, and create content for the game "Street Fighter 6". I wanted to gain more experience in web development, specifically familiarising myself with popular modern technologies, and so I created a website to host all my social media, brand information, and content in one place.
+      
+The site is built with the React framework Next.js and styled using Tailwind CSS. It is hosted on Vercel, the creators of Next.js.
+
+This project was my first project since graduating, and one I hold in high regard. I am proud of not only the quality of the project, but also how quickly I was mastered the fundamentals of Next.js and frontend development.</span>'
+
+    self.<span class="attr">technologies</span> = ['<span class="string">Next.js</span>', 
+                         '<span class="string">React</span>', 
+                         '<span class="string">Tailwind CSS</span>']
+    self.<span class="attr">repository</span> = <a href="https://github.com/bfararjeh/fararjeh_fgc" target="_blank" class="link">fararjeh_fgc</a>
+    self.<span class="attr">site_link</span> = <a href="https://fararjeh-fgc.com/" target="_blank" class="link">Fararjeh</a>
+
+
+
+
+<span class="attr">languages</span> = <span class="parenthesis">[</span>
+    <span class="string">"Python"</span>,
+    <span class="string">"C#"</span>,
+    <span class="string">"TypeScript"</span>,
+    <span class="string">"HTML"</span>,
+    <span class="string">"Javascript"</span>,
+    <span class="parenthesis">]</span>
+
+  
+<span class="attr">relevant_fields</span> = <span class="parenthesis">[</span>
+    <span class="string">"Machine Learning"</span>,
+    <span class="string">"Data Science"</span>,
+    <span class="string">"Video Editing & Graphic Design"</span>,
+    <span class="string">"Frontend Development"</span>,
+    <span class="parenthesis">]</span>
+
+
+<span class="attr">my_skills</span> = <span class="parenthesis">[</span>
+    <span class="string">"Written & Verbal Communication"</span>,
+    <span class="string">"Problem Solving"</span>,
+    <span class="string">"Video Editing & Graphic Design"</span>,
+    <span class="string">"Collaborative Skills"</span>,
+    <span class="parenthesis">]</span>
+
+
+<span class="attr">my_socials</span> = <span class="parenthesis">{
+    <span class="string">"LinkedIn"</span> = <a href="https://www.linkedin.com/in/bfararjeh/" target="_blank" class="link"><span class="functionName">open_linkedin<span class="parenthesis">()</span></span></a>
+    <span class="string">"GitHub"</span> = <a href="https://github.com/bfararjeh/" target="_blank" class="link"><span class="functionName">open_github<span class="parenthesis">()</span></span></a>
+    <span class="string">"LeetCode"</span> = <a href="https://leetcode.com/u/bfararjeh/" target="_blank" class="link"><span class="functionName">open_leetcode<span class="parenthesis">()</span></span></a>
+}</span>
+
+
+
+
+
+
+
+
+&copy; 2025 Baha Alfararjeh. All rights reserved.</pre>
+    </div>
+
+  </body>
+
+  <script>
+    const codeBlock = document.querySelector(".code-block");
+    const lineNumbers = document.getElementById("lineNumbers");
+
+    function updateLineNumbers() {
+      const style = window.getComputedStyle(codeBlock);
+      const lineHeight = parseFloat(style.lineHeight);
+      const totalLines = Math.round(codeBlock.offsetHeight / lineHeight);
+
+      lineNumbers.innerHTML = Array.from({ length: totalLines }, (_, i) => i + 1).join("<br>");
+    }
+
+    updateLineNumbers();
+
+    new MutationObserver(updateLineNumbers).observe(codeBlock, {
+      childList: true,
+      subtree: true,
+      characterData: true,
+    });
+
+    window.addEventListener("resize", updateLineNumbers);
+
+    codeBlock.addEventListener("scroll", () => {
+      lineNumbers.scrollTop = codeBlock.scrollTop;
+    });
+  </script>
+
+  <script>
+    const themes = [
+      "theme-default",
+      "theme-monokai-classic",
+      "theme-monokai-machine",
+      "theme-monokai-ristretto",
+      "theme-terminal"
+    ];
+
+    let currentTheme = 0;
+    const button = document.getElementById("themeButton");
+
+
+    button.addEventListener("click", () => {
+      document.documentElement.classList.remove(themes[currentTheme]);
+      currentTheme = (currentTheme + 1) % themes.length;
+      document.documentElement.classList.add(themes[currentTheme]);
+      localStorage.setItem("preferredTheme", currentTheme);
+    });
+  </script>
+</html>
