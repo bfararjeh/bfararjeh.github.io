@@ -14,16 +14,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
     height: 100vh;
 }
 
-.half span {
-    font-size: 6vw;
-    transition: transform 0.4s;
+.half a {
+    font-size: 5vw;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.5s;
 }
 
-.half span:hover {
+.half a:hover {
     transform: scale(1.1);
 }
 
