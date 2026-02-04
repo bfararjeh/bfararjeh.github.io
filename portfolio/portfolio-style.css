@@ -152,8 +152,8 @@ body {
 }
 
 .code-block {
-  font-size: 1.25rem;
-  line-height: 2rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
   display: inline-block;
   white-space: pre-wrap;
 }
@@ -165,8 +165,8 @@ body {
   padding-left: 20px;
   padding-right: 30px;
   user-select: none;
-  line-height: 2rem;
-  font-size: 1.25rem;
+  line-height: 2.502rem;
+  font-size: 1.5rem;
   text-align: right;
 }
 
@@ -176,14 +176,14 @@ body {
 
 @media (max-width: 1000px) {
   .line-numbers { 
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     line-height: 1.5rem;
     padding-top: 14.5px;
     padding-left: 10px;
     padding-right: 15px;
   }
   .code-block { 
-    font-size: 0.9rem;
-    line-height: 1.5rem;
+    font-size: 0.75rem;
+    line-height: 1.5015rem;
   }
 }

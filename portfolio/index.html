@@ -160,6 +160,10 @@ This project was my first project since graduating, and one I hold in high regar
 
     window.addEventListener("resize", updateLineNumbers);
 
+    document.addEventListener("DOMContentLoaded", () => {
+    updateLineNumbers();
+  });
+
     codeBlock.addEventListener("scroll", () => {
       lineNumbers.scrollTop = codeBlock.scrollTop;
     });
