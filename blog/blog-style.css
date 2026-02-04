@@ -71,6 +71,9 @@ footer {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
+.post-preview > div:last-child {
+  flex: 1;
+}
 .post-preview h2 {
   margin-top: 0;
   margin-bottom: 0;
@@ -87,6 +90,7 @@ footer {
 
 .post-number {
     font-size: clamp(24px, 4vw, 32px);
+    width: 80px;
     opacity: 0.4;
     margin-left: 1vw;
     margin-right: 4vw;
