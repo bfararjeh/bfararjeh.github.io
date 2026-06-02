@@ -1,54 +1,308 @@
-html, body {
+/* meta */
+
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
-    height: 100%;
+    padding: 0;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #545874 #151720;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
+    font-family: Consolas, 'Courier New', monospace;
+    background: linear-gradient(
+        160deg, 
+        #0f0f1a 0%, 
+        #182e35 25%, 
+        #182e35 30%, 
+        #2f243f 70%, 
+        #2f243f 75%, 
+        #1a2a3a 100%
+    );
+    color: #ffffff;
+}
+
+
+/* hero section stuff */
+
+.hero {
+    min-height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.hero-name {
+    font-family: 'Abril Fatface', 'Times New Roman', Times, serif;
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+    margin-bottom: 0.5rem;
+}
+
+.hero-tagline {
+    font-size: clamp(0.85rem, 2vw, 1.1rem);
+    color: #b6b6b6;
+    letter-spacing: 0.12em;
+    margin-bottom: 2.5rem;
+}
+
+
+
+
+/* section */
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem;
+}
+
+.section-content {
+    max-width: 640px;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    color: #eaf2f1;
+}
+
+.section-title {
+    font-family: 'Abril Fatface', 'Times New Roman', Times, serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 400;
+}
+
+.section-desc {
+    font-size: 0.95rem;
+    color: #aaaaaa;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+
+
+.section-portfolio {
+    align-items: stretch;
+    padding: 0;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.portfolio-left {
+    padding: 5rem 3rem 5rem 2rem;
+}
+
+.portfolio-right {
+    padding: 15rem 0rem 5rem 3rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.section-blog {
+    align-items: stretch;
+    padding: 0;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.blog-left {
+    padding: 5rem 3rem 5rem 2rem;
+}
+
+
+
+.blog-right {
+    padding: 5rem 2rem 5rem 3rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.blog-post-viewer {
+    height: calc(100vh - 10rem);
+    overflow-y: auto;
+    padding-right: 1rem;
+    width: 100%;
+    height: 40%;
+}
+
+.blog-post-placeholder {
+    color: #556070;
+    font-size: 0.9rem;
+}
+
+.element-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    text-align: left;
+    border-top: 1px solid #3d4055;
+}
+
+.element-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #3d4055;
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: padding-left 0.2s;
+    font-family: inherit;
+}
+
+.element-item:hover,
+.element-item.active {
+    padding-left: 0.25rem;
+}
+
+.element-item.active .element-name {
+    color: #eaf2f1;
+}
+
+.element-item.active .element-date {
+    color: #ffffff;
+}
+
+.element-item.active .element-tech {
+    color: #b0c4d4;
+}
+
+.element-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #8a9aab;
+    transition: color 0.2s;
+}
+
+.element-date {
+    font-size:0.75rem;
+    font-weight: 400;
+    color: #8a9aab;
+    padding-bottom: 0.5rem;
+    transition: color 0.2s;  
+}
+
+.element-tech {
+    font-size: 0.75rem;
+    color: #556070;
+    transition: color 0.2s;
+}
+
+.project-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-detail.hidden {
+    display: none;
+}
+
+.project-detail-name {
+    font-family: 'Abril Fatface', 'Times New Roman', Times, serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 400;
+}
+
+.project-detail-desc {
+    font-size: 0.95rem;
+    color: #8a9aab;
+    line-height: 1.7;
+    padding-bottom: 1rem;
+}
+
+.project-detail-links {
+    display: flex;
+    gap: 1.5rem;
     flex-wrap: wrap;
 }
 
-.half {
-    flex: 1 1 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.half a {
-    font-size: 5vw;
+.project-link {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #eaf2f1;
     text-decoration: none;
-    color: inherit;
-    transition: transform 0.5s;
+    border-bottom: 1px solid #3d4055;
+    padding-bottom: 0.1rem;
+    transition: border-color 0.2s;
 }
 
-.half a:hover {
-    transform: scale(1.1);
+.project-link:hover {
+    border-color: #eaf2f1;
 }
 
-.left {
-    background-color: #f8f5f0;
-    font-family: 'Abril Fatface', 'Times New Roman', Times, serif;
-    color:#000000;
+
+/* footer */
+.site-footer {
+    background-color: transparent;
+    color: #8a9aab;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    border-top: 1px solid #3d4055;
 }
 
-.right {
-    background-color: #282a3a;
-    font-family: Consolas, 'Courier New', monospace;
-    color:#eaf2f1;
+
+@media (max-width: 1400px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-left {
+        padding: 4rem 2rem 1.5rem;
+        border-right: none;
+    }
+
+    .portfolio-right {
+        padding: 1.5rem 2rem 4rem;
+    }
 }
 
-@media (max-width: 800px), (max-height: 600px) {
-    body {
+@media (max-width: 640px) {
+    .hero-links {
         flex-direction: column;
+        align-items: center;
     }
 }
 
 @font-face {
-  font-family: 'Abril Fatface';
-  src: url('../assets/AbrilFatface-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Abril Fatface';
+    src: url('assets/AbrilFatface-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
