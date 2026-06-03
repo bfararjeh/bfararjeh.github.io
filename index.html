@@ -10,19 +10,72 @@
 </head>
 
     <body>
-        <section class="hero">
+        <section id="hero" class="hero">
             <div class="hero-content">
                 <h1 class="hero-name">Baha Alfararjeh</h1>
                 <p class="hero-tagline">Software Engineer</p>
+                <ul class="hero-socials">
+                    <li><a href="https://github.com/bfararjeh" target="_blank"><img src="/assets/icons/github.svg" alt="GitHub"></a></li>
+                    <li><a href="http://www.linkedin.com/in/bfararjeh" target="_blank"><img src="/assets/icons/linkedin.svg" alt="LinkedIn"></a></li>
+                    <li><a href="https://x.com/balfararjeh" target="_blank"><img src="/assets/icons/twitter.svg" alt="Twitter"></a></li>
+                </ul>
             </div>
         </section>
 
-        <section class="section section-portfolio">
-            <div class="portfolio-grid">
-                <div class="portfolio-left">
-                    <h2 class="section-title">Portfolio</h2>
-                    <p class="section-desc">Projects I've built, technologies I've studied, and fields of computer science I've dabbled in.</p>
+        <section id="about" class="section">
+            <div class="section-header about-header">
+                <div class="about-text">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-desc">My name is Baha Alfararjeh, but you can call me AJ. I'm an aspiring Software Engineer passionate about learning new technologies and bringing ideas to life. Since graduating, I've been focused on finding a career to settle into, as well as developing personal projects to showcase my abilities. Outside of tech, I compete professionally in Street Fighter 6 and create high level infotainment content on YouTube, combining my passions of competition, writing, and problem solving.</p>
+                    <a href="/assets/Baha Alfararjeh Resume.pdf" target="_blank" class="project-link">download cv &rarr;</a>
+                </div>
+                <div class="about-image">
+                    <img src="/assets/Baha Alfararjeh Photo.jpg" alt="Baha Alfararjeh">
+                </div>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-group">
+                    <h3 class="skills-group-title">Languages &amp; Tools</h3>
+                    <ul class="skills-list">
+                        <li>Python</li>
+                        <li>C#</li>
+                        <li>JavaScript</li>
+                        <li>HTML &amp; CSS</li>
+                        <li>SQL</li>
+                        <li>TypeScript</li>
+                    </ul>
+                </div>
+                <div class="skills-group">
+                    <h3 class="skills-group-title">Fields</h3>
+                    <ul class="skills-list">
+                        <li>Machine Learning</li>
+                        <li>Web Development</li>
+                        <li>Full Stack Development</li>
+                        <li>Database Management</li>
+                        <li>UI/UX Design</li>
+                    </ul>
+                </div>
+                <div class="skills-group">
+                    <h3 class="skills-group-title">Tools</h3>
+                    <ul class="skills-list">
+                        <li>GitHub</li>
+                        <li>Unity</li>
+                        <li>Adobe Creative Cloud</li>
+                        <li>Git</li>
+                        <li>Supabase</li>
+                        <li>Visual Studio Code</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
+        <section id="portfolio" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Portfolio</h2>
+                <p class="section-desc">Projects I've built, the technologies they used, and a bit about what they are.</p>
+            </div>
+            <div class="section-grid">
+                <div class="section-grid-left">
                     <div class="element-list">
                         <button class="element-item active" data-project="fantasy">
                             <p class="element-name">Fantasy SF6</p>
@@ -43,46 +96,46 @@
   
                 </div>
 
-                <div class="portfolio-right">
-                    <div class="project-detail" data-project="fantasy">
-                        <h3 class="project-detail-name">Fantasy SF6</h3>
-                        <p class="project-detail-desc">A fantasy sports app for Street Fighter 6. Users can sign up, create leagues with them and their friends, then draft their dream teams. Real standings are updated from events as the sesason progresses, and fantasy teams rank among their leagues according to how many points their players have scored.</br></br>PostgreSQL serves as the database, hosted by Supabase which also serves as the backend. The frontend was coded entirely in Python using packages such as PyQT6 and WebSockets, and bundled into a single Windows executable using pyinstaller.</br></br>This project was the result of 5 months of planning, designing, and developing, and is the project I am most proud of to date. You can download it today using the link below, or check out the GitHub repository.</p>
-                        <div class="project-detail-links">
+                <div class="section-grid-right">
+                    <div class="element-detail" data-project="fantasy">
+                        <h3 class="element-detail-name">Fantasy SF6</h3>
+                        <p class="element-detail-desc">A fantasy sports app for Street Fighter 6. Users can sign up, create leagues with them and their friends, then draft their dream teams. Real standings are updated from events as the sesason progresses, and fantasy teams rank among their leagues according to how many points their players have scored.</br></br>PostgreSQL serves as the database, hosted by Supabase which also serves as the backend. The frontend was coded entirely in Python using packages such as PyQT6 and WebSockets, and bundled into a single Windows executable using pyinstaller.</br></br>This project was the result of 5 months of planning, designing, and developing, and is the project I am most proud of to date. You can download it today using the link below, or check out the GitHub repository.</p>
+                        <div class="element-detail-links">
                             <a href="https://fararjeh-fgc.com/fantasysf6" target="_blank" class="project-link">download &rarr;</a>
                             <a href="https://github.com/bfararjeh/sf6-fantasy-league" target="_blank" class="project-link">repository &rarr;</a>
                         </div>
                     </div>
-                    <div class="project-detail hidden" data-project="brand">
-                        <h3 class="project-detail-name">Fararjeh FGC</h3>
-                        <p class="project-detail-desc">A site built to advertise my brand: Fararjeh FGC. Within the fighting game eSports community, I am an online personality, and I compete at the highest level, create educational content, and coach professionaly. fararjeh-fgc.com serves as the main hub for all my socials, as well as an intro to who I am and any other projects within the Street Fighter 6 community I create.</br></br>I created this site mainly to get some experience in web development, as well as familiarise myself with popular technologies such as Next.js and Tailwind CSS.</br></br>This project was my first since graduating, and despite its simplicity I hold it in high regard. I'm not only proud of the quality of the project, but also its practicality in being a site I can actively advertise and use.</p>
-                        <div class="project-detail-links">
+                    <div class="element-detail hidden" data-project="brand">
+                        <h3 class="element-detail-name">Fararjeh FGC</h3>
+                        <p class="element-detail-desc">A site built to advertise my brand: Fararjeh FGC. Within the fighting game eSports community, I am an online personality, and I compete at the highest level, create educational content, and coach professionaly. fararjeh-fgc.com serves as the main hub for all my socials, as well as an intro to who I am and any other projects within the Street Fighter 6 community I create.</br></br>I created this site mainly to get some experience in web development, as well as familiarise myself with popular technologies such as Next.js and Tailwind CSS.</br></br>This project was my first since graduating, and despite its simplicity I hold it in high regard. I'm not only proud of the quality of the project, but also its practicality in being a site I can actively advertise and use.</p>
+                        <div class="element-detail-links">
                             <a href="https://fararjeh-fgc.com" target="_blank" class="project-link">visit website &rarr;</a>
                             <a href="https://github.com/bfararjeh/fararjeh_fgc" target="_blank" class="project-link">repository &rarr;</a>
                         </div>
 
                     </div>
-                    <div class="project-detail hidden" data-project="footsies">
-                        <h3 class="project-detail-name">Footsies Neural Network</h3>
-                        <p class="project-detail-desc">Footsies is a video game developed by HiFight within the Fighting Game genre. For my dissertation project, I designed, developed, and built an AI agent using a neural network that could be fought against within the game. The project aim was to provide alternative methods of play for players suffering from "Ladder Anxiety", as existing solutions proved (according to secondary research) lacklustre. You can take a look at my research paper and the GitHub repository below.</br></br>TensorFlow and Keras were used for the neural network, with Pandas and scikit-learn for data processing: all written in Python. Websockets were used to connect the neural network to the observation logic written in C# in Unity, running on local servers.</br></br>The project achieved a First, and is the project I am most proud of to date. Not only did I teach myself the fundamentals of machine learning and importance of data preprocessing, but I also learnt how to structure a project plan, organise deadlines, and meet specification requirements.</p>
-                        <div class="project-detail-links">
+                    <div class="element-detail hidden" data-project="footsies">
+                        <h3 class="element-detail-name">Footsies Neural Network</h3>
+                        <p class="element-detail-desc">Footsies is a video game developed by HiFight within the Fighting Game genre. For my dissertation project, I designed, developed, and built an AI agent using a neural network that could be fought against within the game. The project aim was to provide alternative methods of play for players suffering from "Ladder Anxiety", as existing solutions proved (according to secondary research) lacklustre. You can take a look at my research paper and the GitHub repository below.</br></br>TensorFlow and Keras were used for the neural network, with Pandas and scikit-learn for data processing: all written in Python. Websockets were used to connect the neural network to the observation logic written in C# in Unity, running on local servers.</br></br>The project achieved a First, and is the project I am most proud of to date. Not only did I teach myself the fundamentals of machine learning and importance of data preprocessing, but I also learnt how to structure a project plan, organise deadlines, and meet specification requirements.</p>
+                        <div class="element-detail-links">
                             <a href="assets/Using Machine Learning to Create a Human-Like AI Opponent to Combat Ladder Anxiety.pdf" target="_blank" class="project-link">read dissertation &rarr;</a>
                             <a href="https://github.com/bfararjeh/footsies_final_year_project" target="_blank" class="project-link">repository &rarr;</a>
                         </div>
                     </div>
 
                 </div>
-
             </div>
         </section>
 
-        <section class="section section-blog">
-            <div class="blog-grid">
-                <div class="blog-left">
-                    <h2 class="section-title">Unorganised Thoughts</h2>
-                    <p class="section-desc">Ramblings from someone who enjoys writing too much.</p>
-
+        <section id="blog" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Unorganised Thoughts</h2>
+                <p class="section-desc">Ramblings from someone who enjoys writing too much.</p>
+            </div>
+            <div class="section-grid">
+                <div class="section-grid-left">
                     <div class="element-list">
-                        <button class="element-item" data-blog="microwave">
+                        <button class="element-item active" data-blog="microwave">
                             <p class="element-name">Microwave Minutes</p>
                             <p class="element-date">February 2026</p>
                         </button>
@@ -91,12 +144,22 @@
                             <p class="element-date">January 2026</p>
                         </button>
                     </div>
-  
                 </div>
 
-                <div class="blog-right">
-                    <div class="blog-post-viewer">
-                        <p class="blog-post-placeholder">Select a post to read it here.</p>
+                <div class="section-grid-right">
+                    <div class="element-detail" data-blog="microwave">
+                        <h3 class="element-detail-name">Microwave Minutes</h3>
+                        <p class="element-detail-desc">While it is fun to discuss the latest technology that makes our lives marginally easier, it is important to take a step back occasionally and ask the question: What are we doing with our lives?</p>
+                        <div class="element-detail-links">
+                            <a href="/blog/microwave_minutes/" class="project-link">read here &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="element-detail hidden" data-blog="preface">
+                        <h3 class="element-detail-name">Preface</h3>
+                        <p class="element-detail-desc">A small preface with who I am and what this blog is supposed to be.</p>
+                        <div class="element-detail-links">
+                            <a href="/blog/preface/" class="project-link">read here &rarr;</a>
+                        </div>
                     </div>
                 </div>
 
@@ -106,34 +169,27 @@
         <!-- portfolio script -->
         <script>
             const items = document.querySelectorAll('.element-item[data-project]');
-            const details = document.querySelectorAll('.project-detail');
+            const details = document.querySelectorAll('.element-detail[data-project]');
             items.forEach(item => {
                 item.addEventListener('click', () => {
                     items.forEach(i => i.classList.remove('active'));
                     details.forEach(d => d.classList.add('hidden'));
                     item.classList.add('active');
-                    document.querySelector(`.project-detail[data-project="${item.dataset.project}"]`).classList.remove('hidden');
+                    document.querySelector(`.element-detail[data-project="${item.dataset.project}"]`).classList.remove('hidden');
                 });
             });
         </script>
 
         <!-- blog script -->
         <script>
-            const blogUrls = {
-                microwave: '/assets/microwave_minutes.txt',
-                preface: '/assets/preface.txt',
-            };
             const items_blog = document.querySelectorAll('.element-item[data-blog]');
-            const viewer = document.querySelector('.blog-post-viewer');
-
+            const details_blog = document.querySelectorAll('.element-detail[data-blog]');
             items_blog.forEach(item => {
-                item.addEventListener('click', async () => {
+                item.addEventListener('click', () => {
                     items_blog.forEach(i => i.classList.remove('active'));
+                    details_blog.forEach(d => d.classList.add('hidden'));
                     item.classList.add('active');
-                    viewer.innerText = 'Loading...';
-                    const res = await fetch(blogUrls[item.dataset.blog]);
-                    const text = await res.text();
-                    viewer.innerText = text;
+                    document.querySelector(`.element-detail[data-blog="${item.dataset.blog}"]`).classList.remove('hidden');
                 });
             });
         </script>
