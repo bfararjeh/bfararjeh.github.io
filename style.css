@@ -1,54 +1,444 @@
-html, body {
+/* meta */
+
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
-    height: 100%;
+    padding: 0;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #545874 #151720;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
+    font-family: Consolas, 'Courier New', monospace;
+    background: linear-gradient(
+        160deg, 
+        #0f0f1a 0%, 
+        #182e35 25%, 
+        #182e35 30%, 
+        #2f243f 70%, 
+        #2f243f 75%, 
+        #1a2a3a 100%
+    );
+    color: #ffffff;
+}
+
+
+
+
+/* hero section stuff */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.hero-name {
+    font-family: 'Abril Fatface', 'Times New Roman', Times, serif;
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+    margin-bottom: 0.5rem;
+}
+
+.hero-tagline {
+    font-size: clamp(0.85rem, 2vw, 1.1rem);
+    color: #b6b6b6;
+    letter-spacing: 0.12em;
+    margin-bottom: 2.5rem;
+}
+
+.hero-socials {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.half {
-    flex: 1 1 50%;
-    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin-top: 1rem;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-.half a {
-    font-size: 5vw;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.5s;
+.hero-socials img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    transition: transform 0.25s;
 }
 
-.half a:hover {
+.hero-socials img:hover {
     transform: scale(1.1);
 }
 
-.left {
-    background-color: #f8f5f0;
+
+
+/* section */
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    padding: 5rem 2rem;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem 2rem;
+}
+
+.section-title {
     font-family: 'Abril Fatface', 'Times New Roman', Times, serif;
-    color:#000000;
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 400;
 }
 
-.right {
-    background-color: #282a3a;
-    font-family: Consolas, 'Courier New', monospace;
-    color:#eaf2f1;
+.section-desc {
+    font-size: 0.95rem;
+    color: #aaaaaa;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
 }
 
-@media (max-width: 800px), (max-height: 600px) {
-    body {
-        flex-direction: column;
+.section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    align-items: start;
+}
+
+.section-grid-left {
+    padding-right: 2rem;
+}
+
+.section-grid-right {
+    padding-left: 2rem;
+}
+
+
+
+
+/* list stuff */
+
+.element-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    text-align: left;
+}
+
+.element-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #3d4055;
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: padding-left 0.2s;
+    font-family: inherit;
+}
+
+.element-item:hover,
+.element-item.active {
+    padding-left: 0.25rem;
+}
+
+.element-item.active .element-name {
+    color: #eaf2f1;
+}
+
+.element-item.active .element-date {
+    color: #ffffff;
+}
+
+.element-item.active .element-tech {
+    color: #b0c4d4;
+}
+
+.element-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #8a9aab;
+    transition: color 0.2s;
+}
+
+.element-date {
+    font-size:0.75rem;
+    font-weight: 400;
+    color: #8a9aab;
+    padding-bottom: 0.5rem;
+    transition: color 0.2s;  
+}
+
+.element-tech {
+    font-size: 0.75rem;
+    color: #556070;
+    transition: color 0.2s;
+}
+
+
+
+
+/* project stuff */
+
+.element-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.element-detail.hidden {
+    display: none;
+}
+
+.element-detail-name {
+    font-family: 'Abril Fatface', 'Times New Roman', Times, serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 400;
+}
+
+.element-detail-desc {
+    font-size: 0.95rem;
+    color: #8a9aab;
+    line-height: 1.7;
+    padding-bottom: 1rem;
+}
+
+.element-detail-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.project-link {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #eaf2f1;
+    text-decoration: none;
+    border-bottom: 1px solid #3d4055;
+    padding-bottom: 0.1rem;
+    transition: border-color 0.2s;
+}
+
+.project-link:hover {
+    border-color: #eaf2f1;
+}
+
+
+
+
+/* about */
+
+.about-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: center;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.about-image img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+@media (max-width: 640px) {
+    .about-header {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+    
+    .about-image {
+        order: -1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-header img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+
+
+
+/* skills */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 2rem;
+}
+
+.skills-group-title {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #556070;
+    margin-bottom: 1rem;
+}
+
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.skills-list li {
+    font-size: 0.95rem;
+    color: #8a9aab;
+}
+
+
+
+
+/* blog post page */
+
+.post-page {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.post-back {
+    display: inline-block;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8a9aab;
+    text-decoration: none;
+    margin-bottom: 2.5rem;
+}
+
+.post-back:hover {
+    color: #eaf2f1;
+}
+
+.post-title {
+    font-family: 'Abril Fatface', 'Times New Roman', Times, serif;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+}
+
+.post-meta {
+    font-size: 0.8rem;
+    color: #556070;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.05em;
+}
+
+.post-body p {
+    font-size: 1rem;
+    color: #c8d4dc;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+/* footer */
+
+.site-footer {
+    background-color: transparent;
+    color: #8a9aab;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    border-top: 1px solid #3d4055;
+}
+
+
+
+
+/* context aware stuff */
+
+@media (max-width: 640px) {
+    .section {
+        padding: 3rem 1rem;
+        height: 200vh;
+    }
+
+    .section-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 200px;
+        padding: 0;
+    }
+
+    .section-title {
+        text-align: center;
+        padding-bottom: 0.5rem;
+    }
+
+    .section-desc {
+        text-align: center;
+    }
+
+    .section-grid-left {
+        padding-left: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .section-grid-right {
+        padding-right: 1rem;
+        align-self: start;
+        min-height: 200px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
     }
 }
 
 @font-face {
-  font-family: 'Abril Fatface';
-  src: url('../assets/AbrilFatface-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Abril Fatface';
+    src: url('assets/AbrilFatface-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
