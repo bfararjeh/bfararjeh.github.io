@@ -38,11 +38,11 @@
                     <h3 class="skills-group-title">Languages &amp; Tools</h3>
                     <ul class="skills-list">
                         <li>Python</li>
-                        <li>C#</li>
-                        <li>JavaScript</li>
+                        <li>TypeScript</li>
                         <li>HTML &amp; CSS</li>
                         <li>SQL</li>
-                        <li>TypeScript</li>
+                        <li>JavaScript</li>
+                        <li>C#</li>
                     </ul>
                 </div>
                 <div class="skills-group">
@@ -77,7 +77,12 @@
             <div class="section-grid">
                 <div class="section-grid-left">
                     <div class="element-list">
-                        <button class="element-item active" data-project="fantasy">
+                        <button class="element-item active" data-project="surge">
+                            <p class="element-name">SurgeCap</p>
+                            <p class="element-date">June 2026</p>
+                            <p class="element-tech">Next.js &middot; React &middot; TypeScript &middot; CSS</p>
+                        </button>
+                        <button class="element-item" data-project="fantasy">
                             <p class="element-name">Fantasy SF6</p>
                             <p class="element-date">May 2026</p>
                             <p class="element-tech">Python &middot; PyQt6 &middot; Supabase &middot; WebSockets &middot; PostgreSQL</p>
@@ -93,11 +98,18 @@
                             <p class="element-tech">TensorFlow &middot; Python &middot; C# &middot; Keras</p>
                         </button>
                     </div>
-  
                 </div>
 
                 <div class="section-grid-right">
-                    <div class="element-detail" data-project="fantasy">
+                    <div class="element-detail" data-project="surge">
+                        <h3 class="element-detail-name">SurgeCap</h3>
+                        <p class="element-detail-desc">SurgeCap is a logic puzzle game in which you must connect cells in a grid to charge batteries. Paths can only be constructed orthagonally, and paths between cells must always be taken if possible; electricity cannot be contained after all!</br></br>Built over a few days as a personal project, I used this web-app to experiment and learn TypeScript in a practical context, get some familiarity with the whole web-app design and development process, and lastly bring life to an idea I was sitting on. This site is built almost exclusively in Next.js and TypeScript, with plain CSS for styling, and is hosted on Vercel.</p>
+                        <div class="element-detail-links">
+                            <a href="https://surgecap.vercel.app/" target="_blank" class="project-link">play &rarr;</a>
+                            <a href="https://github.com/bfararjeh/surgecap" target="_blank" class="project-link">repository &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="element-detail hidden" data-project="fantasy">
                         <h3 class="element-detail-name">Fantasy SF6</h3>
                         <p class="element-detail-desc">A fantasy sports app for Street Fighter 6. Users can sign up, create leagues with them and their friends, then draft their dream teams. Real standings are updated from events as the sesason progresses, and fantasy teams rank among their leagues according to how many points their players have scored.</br></br>PostgreSQL serves as the database, hosted by Supabase which also serves as the backend. The frontend was coded entirely in Python using packages such as PyQT6 and WebSockets, and bundled into a single Windows executable using pyinstaller.</br></br>This project was the result of 5 months of planning, designing, and developing, and is the project I am most proud of to date. You can download it today using the link below, or check out the GitHub repository.</p>
                         <div class="element-detail-links">
@@ -122,7 +134,6 @@
                             <a href="https://github.com/bfararjeh/footsies_final_year_project" target="_blank" class="project-link">repository &rarr;</a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
