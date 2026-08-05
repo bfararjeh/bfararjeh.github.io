@@ -138,45 +138,6 @@
             </div>
         </section>
 
-        <section id="blog" class="section">
-            <div class="section-header">
-                <h2 class="section-title">Unorganised Thoughts</h2>
-                <p class="section-desc">Ramblings from someone who enjoys writing too much.</p>
-            </div>
-            <div class="section-grid">
-                <div class="section-grid-left">
-                    <div class="element-list">
-                        <button class="element-item active" data-blog="microwave">
-                            <p class="element-name">Microwave Minutes</p>
-                            <p class="element-date">February 2026</p>
-                        </button>
-                        <button class="element-item" data-blog="preface">
-                            <p class="element-name">Preface</p>
-                            <p class="element-date">January 2026</p>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="section-grid-right">
-                    <div class="element-detail" data-blog="microwave">
-                        <h3 class="element-detail-name">Microwave Minutes</h3>
-                        <p class="element-detail-desc">While it is fun to discuss the latest technology that makes our lives marginally easier, it is important to take a step back occasionally and ask the question: What are we doing with our lives?</p>
-                        <div class="element-detail-links">
-                            <a href="/blog/microwave_minutes/" class="project-link">read here &rarr;</a>
-                        </div>
-                    </div>
-                    <div class="element-detail hidden" data-blog="preface">
-                        <h3 class="element-detail-name">Preface</h3>
-                        <p class="element-detail-desc">A small preface with who I am and what this blog is supposed to be.</p>
-                        <div class="element-detail-links">
-                            <a href="/blog/preface/" class="project-link">read here &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
         <!-- portfolio script -->
         <script>
             const items = document.querySelectorAll('.element-item[data-project]');
@@ -187,20 +148,6 @@
                     details.forEach(d => d.classList.add('hidden'));
                     item.classList.add('active');
                     document.querySelector(`.element-detail[data-project="${item.dataset.project}"]`).classList.remove('hidden');
-                });
-            });
-        </script>
-
-        <!-- blog script -->
-        <script>
-            const items_blog = document.querySelectorAll('.element-item[data-blog]');
-            const details_blog = document.querySelectorAll('.element-detail[data-blog]');
-            items_blog.forEach(item => {
-                item.addEventListener('click', () => {
-                    items_blog.forEach(i => i.classList.remove('active'));
-                    details_blog.forEach(d => d.classList.add('hidden'));
-                    item.classList.add('active');
-                    document.querySelector(`.element-detail[data-blog="${item.dataset.blog}"]`).classList.remove('hidden');
                 });
             });
         </script>
